@@ -1,25 +1,37 @@
-import './App.css'
-import Banner from './components/Banner'
-import Nav from './components/Nav'
-import styled from 'styled-components'
+
+import {Outlet, Route,Routes} from 'react-router-dom';
+import Nav from './components/Nav';
+import LoginPage from './pages/LoginPage';
+import MainPage from './pages/MainPage';
+import DetailPage from './pages/DetailPage';
+import SearchPage from './pages/SearchPage';
+import './App.css';
+
+const Layout = () => {
+  return (
+    <div>
+    <Nav />
+    <Outlet />
+    </div>
+  );
+} ;
 
 function App() {
 
   return (
     
-      <Container>
-      <Nav />
-      <Banner/>
-      </Container>
-   
+    <div className="app">
+    <Routes>
+      <Route path='/' element={<Layout/>}>
+        <Route index element={<LoginPage/>}/>
+        <Route path="main" element={<MainPage/>}/>
+        <Route path=":movieId" element={<DetailPage/>}/>
+        <Route path="search" element={<SearchPage/>}/>
+      </Route>
+    </Routes>
+    </div>
   )
 }
 
 export default App;
 
-const Container=styled.main`
-  position:relative;
-  display:block;
-  top:70px;
-  padding:0 calc(3.5vw + 5px);
-  `
