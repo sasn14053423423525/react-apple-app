@@ -72,8 +72,7 @@ const Row = ({title,id,fetchUrl}) => {
           className='row__poster'
           src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
           alt={movie.name}
-          onClick={()=>handleClick(movie)}
-      />
+          onClick={()=>handleClick(movie)}/>
         </Wrap>
       </SwiperSlide>
     ))}
@@ -95,7 +94,7 @@ const Content = styled.div`
 `;
 const Wrap = styled.div`
   width:95%;
-  height:95%;
+  height:90%;
   padding-top:56.25%;
   border-radius:10px;
   box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,

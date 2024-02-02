@@ -40,7 +40,9 @@ const Nav = () => {
           className="nav__input"
           value={searchValue}
           onChange={handleChange}
-          placeholder="영화를 검색해주세요."/>
+          placeholder="영화를 검색해주세요.">
+          
+        </Input>
         <Login>로그인</Login>
         </NavWrapper>
   )

@@ -6,6 +6,8 @@ import MainPage from './pages/MainPage';
 import DetailPage from './pages/DetailPage';
 import SearchPage from './pages/SearchPage';
 import './App.css';
+// import Banner from './components/Banner';
+// import DetailPage from './pages/DetailPage';
 
 const Layout = () => {
   return (
@@ -17,10 +19,10 @@ const Layout = () => {
 } ;
 
 function App() {
-
+  // const [movie,setMovie] = useState(null)
   return (
-    
     <div className="app">
+     
     <Routes>
       <Route path='/' element={<Layout/>}>
         <Route index element={<LoginPage/>}/>

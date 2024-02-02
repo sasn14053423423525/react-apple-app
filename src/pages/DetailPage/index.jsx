@@ -2,6 +2,8 @@ import React, { useEffect,useState } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from '../../api/axios';
 import { imageBasePath } from '../../components/constant';
+import Banner from '../../components/Banner';
+
 
 const DetailPage = () => {
     const {movieId} = useParams();
@@ -21,11 +23,15 @@ const DetailPage = () => {
     if (!movie) return null;
 
   return (
+    
     <section>
         <img
         src={`${imageBasePath}${movie.backdrop_path}`}
         alt="detail"
         />
+        
+
+       
     </section>
     )
 }

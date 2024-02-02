@@ -73,7 +73,7 @@
 .row__poster{
     object-fit:contain;
     width:100%;
-    max-height: 100%;
+    max-height: 180px;
     margin-right:10px;
     transition: transform 450ms;
     border-radius: 4px;
@@ -91,7 +91,11 @@
         max-height: 180px;
     }
 }
-
+@media screen and (max-width: 2000px){
+    .row__poster{
+        max-height: 180px;
+    }
+}
 
 
 /* .swiper-pagination{
